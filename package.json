@@ -1,0 +1,46 @@
+{
+  "name": "thread-app",
+  "version": "0.0.1-beta.0",
+  "private": true,
+  "description": "template",
+  "keywords": [
+    "nextjs"
+  ],
+  "license": "ISC",
+  "author": "OhMinsSup",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "db:push": "pnpm -F @veloss/db db:push",
+    "db:studio": "pnpm -F @veloss/db db:studio",
+    "dev": "turbo dev --parallel",
+    "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "postinstall": "pnpm lint:ws",
+    "typecheck": "turbo typecheck",
+    "ui:add": "pnpm -F @veloss/ui ui-add"
+  },
+  "prettier": "@veloss/prettier-config",
+  "devDependencies": {
+    "@veloss/prettier-config": "workspace:*",
+    "@turbo/gen": "^1.13.3",
+    "dotenv-cli": "^7.4.2",
+    "prettier": "^3.2.5",
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@9.0.5",
+  "engines": {
+    "bun": ">=1.0",
+    "node": ">=20.0"
+  }
+}

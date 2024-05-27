@@ -1,0 +1,42 @@
+{
+  "name": "@veloss/auth",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "react-server": "./src/index.rsc.ts",
+      "default": "./src/index.ts"
+    },
+    "./env": "./env.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@veloss/shared": "workspace:*",
+    "@veloss/validators": "workspace:*",
+    "@veloss/error": "workspace:*",
+    "@veloss/enum": "workspace:*",
+    "@veloss/db": "workspace:*",
+    "@t3-oss/env-nextjs": "^0.10.1",
+    "next": "^14.2.3",
+    "next-auth": "5.0.0-beta.18",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@veloss/eslint-config": "workspace:*",
+    "@veloss/prettier-config": "workspace:*",
+    "@veloss/tsconfig": "workspace:*",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "prettier": "@veloss/prettier-config"
+}
