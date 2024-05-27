@@ -17,8 +17,8 @@
     "build": "turbo build",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
-    "db:push": "pnpm -F @veloss/db db:push",
-    "db:studio": "pnpm -F @veloss/db db:studio",
+    "db:push": "pnpm -F @teso/db db:push",
+    "db:studio": "pnpm -F @teso/db db:studio",
     "dev": "turbo dev --parallel",
     "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
     "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
@@ -27,11 +27,11 @@
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
     "typecheck": "turbo typecheck",
-    "ui:add": "pnpm -F @veloss/ui ui-add"
+    "ui:add": "pnpm -F @teso/ui ui-add"
   },
-  "prettier": "@veloss/prettier-config",
+  "prettier": "@teso/prettier-config",
   "devDependencies": {
-    "@veloss/prettier-config": "workspace:*",
+    "@teso/prettier-config": "workspace:*",
     "@turbo/gen": "^1.13.3",
     "dotenv-cli": "^7.4.2",
     "prettier": "^3.2.5",

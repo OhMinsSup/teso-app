@@ -1,6 +1,6 @@
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
-import { auth } from "@veloss/auth";
-import { appRouter, createTRPCContext } from "@veloss/trpc";
+import { auth } from "@teso/auth";
+import { appRouter, createTRPCContext } from "@teso/trpc";
 
 /**
  * Configure basic CORS headers

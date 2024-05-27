@@ -2,13 +2,13 @@ import type { NextAuthConfig } from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import Credentials from "next-auth/providers/credentials";
 
-import type { User, UserProfile } from "@veloss/db";
-import { prisma } from "@veloss/db";
-import { getUserSelector } from "@veloss/db/selectors";
-import { HttpStatus } from "@veloss/enum/http-status";
-import { createError } from "@veloss/error/http";
-import { secureCompare } from "@veloss/shared/password";
-import { schema } from "@veloss/validators/auth";
+import type { User, UserProfile } from "@teso/db";
+import { prisma } from "@teso/db";
+import { getUserSelector } from "@teso/db/selectors";
+import { HttpStatus } from "@teso/enum/http-status";
+import { createError } from "@teso/error/http";
+import { secureCompare } from "@teso/shared/password";
+import { schema } from "@teso/validators/auth";
 
 declare module "next-auth" {
   interface Session {

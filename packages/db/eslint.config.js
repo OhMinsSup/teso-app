@@ -1,4 +1,4 @@
-import baseConfig, { restrictEnvAccess } from "@veloss/eslint-config/base";
+import baseConfig, { restrictEnvAccess } from "@teso/eslint-config/base";
 
 /** @type {import('typescript-eslint').Config} */
 export default [

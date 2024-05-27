@@ -1,7 +1,7 @@
 import { cache } from "react";
 import { headers } from "next/headers";
-import { auth } from "@veloss/auth";
-import { createCaller, createTRPCContext } from "@veloss/trpc";
+import { auth } from "@teso/auth";
+import { createCaller, createTRPCContext } from "@teso/trpc";
 
 /**
  * This wraps the `createTRPCContext` helper and provides the required context for the tRPC API when

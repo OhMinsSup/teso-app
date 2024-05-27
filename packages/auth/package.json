@@ -1,5 +1,5 @@
 {
-  "name": "@veloss/auth",
+  "name": "@teso/auth",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -18,11 +18,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@veloss/shared": "workspace:*",
-    "@veloss/validators": "workspace:*",
-    "@veloss/error": "workspace:*",
-    "@veloss/enum": "workspace:*",
-    "@veloss/db": "workspace:*",
+    "@teso/shared": "workspace:*",
+    "@teso/validators": "workspace:*",
+    "@teso/error": "workspace:*",
+    "@teso/enum": "workspace:*",
+    "@teso/db": "workspace:*",
     "@t3-oss/env-nextjs": "^0.10.1",
     "next": "^14.2.3",
     "next-auth": "5.0.0-beta.18",
@@ -31,12 +31,12 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@veloss/eslint-config": "workspace:*",
-    "@veloss/prettier-config": "workspace:*",
-    "@veloss/tsconfig": "workspace:*",
+    "@teso/eslint-config": "workspace:*",
+    "@teso/prettier-config": "workspace:*",
+    "@teso/tsconfig": "workspace:*",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5"
   },
-  "prettier": "@veloss/prettier-config"
+  "prettier": "@teso/prettier-config"
 }

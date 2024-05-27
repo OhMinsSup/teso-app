@@ -11,7 +11,7 @@ importers:
       '@turbo/gen':
         specifier: ^1.13.3
         version: 1.13.3(@types/node@20.12.12)(typescript@5.4.5)
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:tooling/prettier
       dotenv-cli:
@@ -56,31 +56,31 @@ importers:
       '@trpc/server':
         specifier: 11.0.0-rc.364
         version: 11.0.0-rc.364
-      '@veloss/auth':
+      '@teso/auth':
         specifier: workspace:*
         version: link:../../packages/auth
-      '@veloss/db':
+      '@teso/db':
         specifier: workspace:*
         version: link:../../packages/db
-      '@veloss/enum':
+      '@teso/enum':
         specifier: workspace:*
         version: link:../../packages/enum
-      '@veloss/error':
+      '@teso/error':
         specifier: workspace:*
         version: link:../../packages/error
-      '@veloss/hooks':
+      '@teso/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
-      '@veloss/shared':
+      '@teso/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      '@veloss/trpc':
+      '@teso/trpc':
         specifier: workspace:*
         version: link:../../packages/trpc
-      '@veloss/ui':
+      '@teso/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@veloss/validators':
+      '@teso/validators':
         specifier: workspace:*
         version: link:../../packages/validators
       geist:
@@ -126,16 +126,16 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tailwind-config':
+      '@teso/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       dotenv-cli:
@@ -162,19 +162,19 @@ importers:
       '@t3-oss/env-nextjs':
         specifier: ^0.10.1
         version: 0.10.1(typescript@5.4.5)(zod@3.23.8)
-      '@veloss/db':
+      '@teso/db':
         specifier: workspace:*
         version: link:../db
-      '@veloss/enum':
+      '@teso/enum':
         specifier: workspace:*
         version: link:../enum
-      '@veloss/error':
+      '@teso/error':
         specifier: workspace:*
         version: link:../error
-      '@veloss/shared':
+      '@teso/shared':
         specifier: workspace:*
         version: link:../shared
-      '@veloss/validators':
+      '@teso/validators':
         specifier: workspace:*
         version: link:../validators
       next:
@@ -193,13 +193,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -233,13 +233,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       dotenv-cli:
@@ -263,13 +263,13 @@ importers:
 
   packages/enum:
     devDependencies:
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -284,17 +284,17 @@ importers:
 
   packages/error:
     dependencies:
-      '@veloss/enum':
+      '@teso/enum':
         specifier: workspace:*
         version: link:../enum
     devDependencies:
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -312,16 +312,16 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.3
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tailwind-config':
+      '@teso/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -349,13 +349,13 @@ importers:
       '@types/bcryptjs':
         specifier: ^2.4.6
         version: 2.4.6
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -376,22 +376,22 @@ importers:
       '@trpc/server':
         specifier: 11.0.0-rc.364
         version: 11.0.0-rc.364
-      '@veloss/auth':
+      '@teso/auth':
         specifier: workspace:*
         version: link:../auth
-      '@veloss/db':
+      '@teso/db':
         specifier: workspace:*
         version: link:../db
-      '@veloss/enum':
+      '@teso/enum':
         specifier: workspace:*
         version: link:../enum
-      '@veloss/error':
+      '@teso/error':
         specifier: workspace:*
         version: link:../error
-      '@veloss/shared':
+      '@teso/shared':
         specifier: workspace:*
         version: link:../shared
-      '@veloss/validators':
+      '@teso/validators':
         specifier: workspace:*
         version: link:../validators
       superjson:
@@ -401,13 +401,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -552,16 +552,16 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.3
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tailwind-config':
+      '@teso/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -589,13 +589,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -638,10 +638,10 @@ importers:
         specifier: ^7.8.0
         version: 7.10.0(eslint@8.57.0)(typescript@5.4.5)
     devDependencies:
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       eslint:
@@ -669,7 +669,7 @@ importers:
         specifier: ^0.5.14
         version: 0.5.14(@ianvs/prettier-plugin-sort-imports@4.2.1(prettier@3.2.5))(prettier@3.2.5)
     devDependencies:
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       rimraf:
@@ -694,13 +694,13 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.4.5)))
     devDependencies:
-      '@veloss/eslint-config':
+      '@teso/eslint-config':
         specifier: workspace:*
         version: link:../eslint
-      '@veloss/prettier-config':
+      '@teso/prettier-config':
         specifier: workspace:*
         version: link:../prettier
-      '@veloss/tsconfig':
+      '@teso/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       eslint:

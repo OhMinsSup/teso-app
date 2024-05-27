@@ -1,6 +1,6 @@
 import type { TRPCRouterRecord } from "@trpc/server";
 
-import { schema } from "@veloss/validators/auth";
+import { schema } from "@teso/validators/auth";
 
 import { usersService } from "../services/users.services";
 import { protectedProcedure, publicProcedure } from "../trpc";

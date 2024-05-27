@@ -7,7 +7,7 @@ import {
   ChevronRightIcon,
   DotFilledIcon,
 } from "@radix-ui/react-icons";
-import { cn } from "@veloss/ui";
+import { cn } from "@teso/ui";
 
 const ContextMenu = ContextMenuPrimitive.Root;
 

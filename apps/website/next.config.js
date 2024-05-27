@@ -10,11 +10,11 @@ const config = {
 
   /** Enables hot reloading for local packages without a build step */
   transpilePackages: [
-    "@veloss/trpc",
-    "@veloss/auth",
-    "@veloss/db",
-    "@veloss/ui",
-    "@veloss/validators",
+    "@teso/trpc",
+    "@teso/auth",
+    "@teso/db",
+    "@teso/ui",
+    "@teso/validators",
   ],
 
   /** We already do linting and typechecking as separate tasks in CI */

@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import baseConfig from "@veloss/tailwind-config/web";
+import baseConfig from "@teso/tailwind-config/web";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {

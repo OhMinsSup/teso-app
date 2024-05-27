@@ -1,11 +1,11 @@
 import { remember } from "@epic-web/remember";
 
-import type { FormFieldsSignupSchema } from "@veloss/validators/auth";
-import { prisma } from "@veloss/db";
-import { HttpStatus } from "@veloss/enum/http-status";
-import { createError } from "@veloss/error/http";
-import { generateHash, generateSalt } from "@veloss/shared/password";
-import { generatorName } from "@veloss/shared/utils";
+import type { FormFieldsSignupSchema } from "@teso/validators/auth";
+import { prisma } from "@teso/db";
+import { HttpStatus } from "@teso/enum/http-status";
+import { createError } from "@teso/error/http";
+import { generateHash, generateSalt } from "@teso/shared/password";
+import { generatorName } from "@teso/shared/utils";
 
 export class UsersService {
   /**

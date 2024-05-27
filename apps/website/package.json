@@ -1,5 +1,5 @@
 {
-  "name": "@veloss/website",
+  "name": "@teso/website",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -22,15 +22,15 @@
     "@lexical/react": "^0.15.0",
     "lexical": "^0.15.0",
     "lodash-es": "^4.17.21",
-    "@veloss/auth": "workspace:*",
-    "@veloss/db": "workspace:*",
-    "@veloss/error": "workspace:*",
-    "@veloss/enum": "workspace:*",
-    "@veloss/trpc": "workspace:*",
-    "@veloss/ui": "workspace:*",
-    "@veloss/shared": "workspace:*",
-    "@veloss/hooks": "workspace:*",
-    "@veloss/validators": "workspace:*",
+    "@teso/auth": "workspace:*",
+    "@teso/db": "workspace:*",
+    "@teso/error": "workspace:*",
+    "@teso/enum": "workspace:*",
+    "@teso/trpc": "workspace:*",
+    "@teso/ui": "workspace:*",
+    "@teso/shared": "workspace:*",
+    "@teso/hooks": "workspace:*",
+    "@teso/validators": "workspace:*",
     "@trpc/client": "11.0.0-rc.364",
     "@trpc/react-query": "11.0.0-rc.364",
     "@trpc/server": "11.0.0-rc.364",
@@ -45,10 +45,10 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@veloss/eslint-config": "workspace:*",
-    "@veloss/prettier-config": "workspace:*",
-    "@veloss/tailwind-config": "workspace:*",
-    "@veloss/tsconfig": "workspace:*",
+    "@teso/eslint-config": "workspace:*",
+    "@teso/prettier-config": "workspace:*",
+    "@teso/tailwind-config": "workspace:*",
+    "@teso/tsconfig": "workspace:*",
     "@types/node": "^20.12.9",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
@@ -59,5 +59,5 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
   },
-  "prettier": "@veloss/prettier-config"
+  "prettier": "@teso/prettier-config"
 }

@@ -3,7 +3,7 @@
 import type { DialogProps } from "@radix-ui/react-dialog";
 import * as React from "react";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
-import { cn } from "@veloss/ui";
+import { cn } from "@teso/ui";
 import { Command as CommandPrimitive } from "cmdk";
 
 import { Dialog, DialogContent } from "./dialog";

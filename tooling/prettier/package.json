@@ -1,5 +1,5 @@
 {
-  "name": "@veloss/prettier-config",
+  "name": "@teso/prettier-config",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -11,7 +11,7 @@
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "typecheck": "tsc --noEmit"
   },
-  "prettier": "@veloss/prettier-config",
+  "prettier": "@teso/prettier-config",
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "prettier": "^3.2.5",
@@ -19,7 +19,7 @@
     "prettier-plugin-tailwindcss": "^0.5.14"
   },
   "devDependencies": {
-    "@veloss/tsconfig": "workspace:*",
+    "@teso/tsconfig": "workspace:*",
     "rimraf": "^5.0.7",
     "typescript": "^5.4.5"
   },

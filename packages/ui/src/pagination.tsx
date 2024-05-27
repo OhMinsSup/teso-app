@@ -4,7 +4,7 @@ import {
   ChevronRightIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
-import { cn } from "@veloss/ui";
+import { cn } from "@teso/ui";
 
 import type { ButtonProps } from "./button";
 import { buttonVariants } from "./button";

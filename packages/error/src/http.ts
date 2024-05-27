@@ -1,4 +1,4 @@
-import { HttpStatus } from "@veloss/enum/http-status";
+import { HttpStatus } from "@teso/enum/http-status";
 
 export enum ErrorDisplayType {
   NONE = "NONE",

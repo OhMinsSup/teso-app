@@ -1,6 +1,6 @@
 "use client";
 
-import type { AppRouter } from "@veloss/trpc";
+import type { AppRouter } from "@teso/trpc";
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { loggerLink, unstable_httpBatchStreamLink } from "@trpc/client";

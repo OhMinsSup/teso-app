@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { cn } from "@veloss/ui";
-import { ThemeProvider } from "@veloss/ui/theme";
-import { Toaster } from "@veloss/ui/toaster";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+
+import { cn } from "@teso/ui";
+import { ThemeProvider } from "@teso/ui/theme";
+import { Toaster } from "@teso/ui/toaster";
 
 import { TRPCReactProvider } from "~/trpc/react";
 

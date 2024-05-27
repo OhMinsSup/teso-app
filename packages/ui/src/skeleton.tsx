@@ -1,4 +1,4 @@
-import { cn } from "@veloss/ui";
+import { cn } from "@teso/ui";
 
 function Skeleton({
   className,

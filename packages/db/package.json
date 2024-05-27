@@ -1,5 +1,5 @@
 {
-  "name": "@veloss/db",
+  "name": "@teso/db",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -32,9 +32,9 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@veloss/eslint-config": "workspace:*",
-    "@veloss/prettier-config": "workspace:*",
-    "@veloss/tsconfig": "workspace:*",
+    "@teso/eslint-config": "workspace:*",
+    "@teso/prettier-config": "workspace:*",
+    "@teso/tsconfig": "workspace:*",
     "dotenv-cli": "^7.4.2",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
@@ -42,7 +42,7 @@
     "tsx": "^4.10.5",
     "typescript": "^5.4.5"
   },
-  "prettier": "@veloss/prettier-config",
+  "prettier": "@teso/prettier-config",
   "prisma": {
     "seed": "pnpm dlx tsx src/seed.ts"
   }

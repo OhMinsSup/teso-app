@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@veloss/ui";
+import { cn } from "@teso/ui";
 import { Drawer as DrawerPrimitive } from "vaul";
 
 const Drawer = ({
