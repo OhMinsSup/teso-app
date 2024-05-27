@@ -2,9 +2,9 @@ import type { NextAuthConfig } from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import Credentials from "next-auth/providers/credentials";
 
-import type { User, UserProfile } from "@teso/db";
+import type { User } from "@teso/db";
 import { prisma } from "@teso/db";
-import { getUserSelector } from "@teso/db/selectors";
+import { getExternalUserSelector, getUserSelector } from "@teso/db/selectors";
 import { HttpStatus } from "@teso/enum/http-status";
 import { createError } from "@teso/error/http";
 import { secureCompare } from "@teso/shared/password";
@@ -12,12 +12,7 @@ import { schema } from "@teso/validators/auth";
 
 declare module "next-auth" {
   interface Session {
-    user: {
-      profile: Pick<UserProfile, "bio" | "website"> | null;
-    } & Pick<
-      User,
-      "id" | "name" | "username" | "email" | "emailVerified" | "image"
-    >;
+    user: User;
   }
 }
 
@@ -38,28 +33,27 @@ export const authConfig = {
           });
         }
 
-        const user1 = await prisma.user.findUnique({
+        const { username, password } = input.data;
+
+        const user = await prisma.user.findFirst({
           where: {
-            username: input.data.username,
+            name: username,
           },
           select: getUserSelector(),
         });
 
-        if (!user1) {
+        if (!user) {
           throw createError({
             message: "유저를 찾을 수 없습니다",
             status: HttpStatus.NOT_FOUND,
             data: {
-              username: "User not found",
+              username: "유저명이 존재하지 않습니다",
             },
           });
         }
 
-        if (user1.Password.hash) {
-          const isMatch = await secureCompare(
-            input.data.password,
-            user1.Password.hash,
-          );
+        if (user.Password?.hash) {
+          const isMatch = await secureCompare(password, user.Password.hash);
 
           if (!isMatch) {
             throw createError({
@@ -69,14 +63,12 @@ export const authConfig = {
           }
         }
 
-        const user2 = await prisma.user.findUnique({
+        return await prisma.user.findUnique({
           where: {
-            id: user1.id,
+            id: user.id,
           },
-          select: getUserSelector(),
+          select: getExternalUserSelector(),
         });
-
-        return user2;
       },
       credentials: {
         username: {},
