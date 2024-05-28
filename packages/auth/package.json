@@ -18,11 +18,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^1.1.0",
     "@teso/shared": "workspace:*",
     "@teso/validators": "workspace:*",
     "@teso/error": "workspace:*",
     "@teso/enum": "workspace:*",
     "@teso/db": "workspace:*",
+    "lodash-es": "4.17.21",
     "@t3-oss/env-nextjs": "^0.10.1",
     "next": "^14.2.3",
     "next-auth": "5.0.0-beta.18",
@@ -34,6 +36,7 @@
     "@teso/eslint-config": "workspace:*",
     "@teso/prettier-config": "workspace:*",
     "@teso/tsconfig": "workspace:*",
+    "@types/lodash-es": "4.17.12",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5"

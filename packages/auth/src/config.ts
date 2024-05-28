@@ -1,10 +1,15 @@
-import type { NextAuthConfig } from "next-auth";
-import { PrismaAdapter } from "@auth/prisma-adapter";
+import type {
+  DefaultSession,
+  NextAuthConfig,
+  User as NextAuthUser,
+} from "next-auth";
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import pick from "lodash-es/pick";
 import Credentials from "next-auth/providers/credentials";
 
-import type { User } from "@teso/db";
-import { prisma } from "@teso/db";
-import { getExternalUserSelector, getUserSelector } from "@teso/db/selectors";
+import { eq } from "@teso/db";
+import { db } from "@teso/db/client";
+import { Account, Password, Session, User } from "@teso/db/schema";
 import { HttpStatus } from "@teso/enum/http-status";
 import { createError } from "@teso/error/http";
 import { secureCompare } from "@teso/shared/password";
@@ -12,12 +17,18 @@ import { schema } from "@teso/validators/auth";
 
 declare module "next-auth" {
   interface Session {
-    user: User;
+    user: {
+      id: string;
+    } & DefaultSession["user"];
   }
 }
 
 export const authConfig = {
-  adapter: PrismaAdapter(prisma),
+  adapter: DrizzleAdapter(db, {
+    usersTable: User,
+    accountsTable: Account,
+    sessionsTable: Session,
+  }),
   providers: [
     Credentials({
       authorize: async (credentials) => {
@@ -33,16 +44,18 @@ export const authConfig = {
           });
         }
 
-        const { username, password } = input.data;
+        const { name, password } = input.data;
 
-        const user = await prisma.user.findFirst({
-          where: {
-            name: username,
-          },
-          select: getUserSelector(),
-        });
+        const _users = await db
+          .select()
+          .from(User)
+          .leftJoin(Password, eq(User.id, Password.userId))
+          .where(eq(User.name, name))
+          .limit(1);
 
-        if (!user) {
+        const _target = _users.at(0);
+
+        if (!_target) {
           throw createError({
             message: "유저를 찾을 수 없습니다",
             status: HttpStatus.NOT_FOUND,
@@ -52,8 +65,8 @@ export const authConfig = {
           });
         }
 
-        if (user.Password?.hash) {
-          const isMatch = await secureCompare(password, user.Password.hash);
+        if (_target.password?.hash) {
+          const isMatch = await secureCompare(password, _target.password.hash);
 
           if (!isMatch) {
             throw createError({
@@ -63,12 +76,7 @@ export const authConfig = {
           }
         }
 
-        return await prisma.user.findUnique({
-          where: {
-            id: user.id,
-          },
-          select: getExternalUserSelector(),
-        });
+        return pick(_target, "user") as unknown as NextAuthUser;
       },
       credentials: {
         username: {},
@@ -79,8 +87,6 @@ export const authConfig = {
   callbacks: {
     session: (opts) => {
       if (!("user" in opts)) throw "unreachable with session strategy";
-
-      console.log("opts ==>", opts);
 
       return {
         ...opts.session,

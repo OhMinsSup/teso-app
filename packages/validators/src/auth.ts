@@ -4,7 +4,7 @@ export const schema = {
   signup: z
     .object({
       confirmPassword: z.string().min(6, "비밀번호는 6글자 이상이어야 합니다."),
-      username: z.string().min(1, "유저명은 1글자 이상이어야 합니다."),
+      name: z.string().min(1, "유저명은 1글자 이상이어야 합니다."),
       password: z.string().min(6, "비밀번호는 6글자 이상이어야 합니다."),
     })
     .refine((data) => data.password === data.confirmPassword, {
@@ -12,7 +12,7 @@ export const schema = {
       path: ["confirmPassword"],
     }),
   signin: z.object({
-    username: z.string().min(1, "유저명은 1글자 이상이어야 합니다."),
+    name: z.string().min(1, "유저명은 1글자 이상이어야 합니다."),
     password: z.string().min(6, "비밀번호는 6글자 이상이어야 합니다."),
   }),
 };

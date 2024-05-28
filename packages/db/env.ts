@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-properties */
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
@@ -7,7 +6,7 @@ export const env = createEnv({
     DATABASE_URL: z
       .string()
       .regex(
-        /^postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)$/,
+        /^postgresql:\/\/(([^:]+):([^@]+)@)?([^:]+)(:(\d+))?\/([^?]+)(\?.+)?$/,
         "Must be a valid PostgreSQL connection URL",
       ),
   },
