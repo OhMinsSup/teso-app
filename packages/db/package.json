@@ -25,7 +25,7 @@
     "clean": "rm -rf .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
-    "db:push": "pnpm with-env drizzle-kit db push",
+    "db:push": "pnpm with-env drizzle-kit push",
     "db:studio": "pnpm with-env drizzle-kit studio",
     "db:seed": "tsx src/seed.ts",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
